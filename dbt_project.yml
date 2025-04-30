@@ -19,7 +19,8 @@ clean-targets:
 
 models:
   analytics:
-    +schema: analytics_staging   
+    +schema: analytics_staging
     staging:
       +materialized: view
-
+    final:
+      +materialized: table

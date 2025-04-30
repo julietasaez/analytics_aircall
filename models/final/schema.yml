@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: final_aircall_performance_rs
+    description: >
+      Daily performance metrics per RS team user, including inbound and outbound calls,
+      duration, effectiveness, and achievement of the minimum target of 17 outbound calls per day.
+    columns:
+      - name: user_id
+        description: Unique identifier of the RS team agent.
+      - name: user_name
+        description: Name of the agent.
+      - name: day
+        description: Analysis day (daily aggregation).
+      - name: total_calls
+        description: Total number of calls (inbound + outbound).
+      - name: total_duration_seconds
+        description: Total call duration for the day (in seconds).
+      - name: average_call_duration
+        description: Average duration of calls for the day (in seconds).
+      - name: successful_calls
+        description: Calls considered successful (duration >= 180 seconds).
+      - name: inbound_calls
+        description: Number of inbound calls.
+      - name: outbound_calls
+        description: Number of outbound calls.
+      - name: target_calls
+        description: Expected daily target for outbound calls (fixed at 17).
+      - name: target_achievement_ratio
+        description: Ratio of target fulfillment (outbound_calls / target_calls).
+      - name: in_target
+        description: Boolean flag indicating whether the target was met (TRUE if outbound_calls >= 17).
+      - name: success_rate
+        description: Proportion of successful calls over total calls for the day.
