@@ -1,0 +1,70 @@
+models:
+  - name: stg_calls
+    description: Staging table for Aircall call records
+    columns:
+      - name: id
+        description: Unique identifier of the call
+      - name: number_id
+        description: ID of the number involved in the call
+      - name: user_id
+        description: ID of the user associated with the call
+      - name: raw_digits_anonymized
+        description: Anonymized version of dialed number
+      - name: answered_at
+        description: Timestamp when the call was answered
+      - name: duration
+        description: Call duration in seconds
+      - name: missed_call_reason
+        description: Reason provided for missed call, if any
+      - name: started_at
+        description: Timestamp when the call started
+      - name: ended_at
+        description: Timestamp when the call ended
+      - name: direction
+        description: Direction of the call (inbound or outbound)
+
+  - name: stg_numbers
+    description: Staging table for Aircall numbers
+    columns:
+      - name: id
+        description: Unique identifier of the number
+      - name: country
+        description: Country of the phone number
+      - name: availability_status
+        description: Current availability of the number
+      - name: live_recording_activated
+        description: Flag indicating if live recording is on
+      - name: name
+        description: Label name of the number
+      - name: digits
+        description: Phone number digits
+      - name: is_ivr
+        description: Indicates if the number is part of an IVR
+
+  - name: stg_tags
+    description: Staging table for Aircall tags
+    columns:
+      - name: id
+        description: Unique identifier of the tag
+      - name: color
+        description: Hex color code associated with the tag
+      - name: name
+        description: Label used to identify the tag
+      - name: description
+        description: Optional internal code or reference for the tag
+
+  - name: stg_users
+    description: Staging table for Aircall users associated with call activity
+    columns:
+      - name: id
+        description: Unique identifier of the user
+      - name: wrap_up_time
+        description: Wrap-up time after call in seconds
+      - name: name
+        description: Full name of the user
+      - name: team
+        description: Team assigned to the user
+      - name: language
+        description: Preferred language of the user
+      - name: time_zone
+        description: User's local time zone

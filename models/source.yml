@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: analytics_raw
+    database: BASES
+    schema: ANALYTICS_RAW
+    description: Raw Aircall data extracted from the source system
+    tables:
+      - name: calls
+      - name: numbers
+      - name: tags
+      - name: users
