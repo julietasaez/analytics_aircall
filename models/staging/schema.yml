@@ -56,7 +56,7 @@ models:
   - name: stg_users
     description: Staging table for Aircall users associated with call activity
     columns:
-      - name: id
+      - name: user_id
         description: Unique identifier of the user
       - name: wrap_up_time
         description: Wrap-up time after call in seconds
