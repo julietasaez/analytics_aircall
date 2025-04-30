@@ -23,3 +23,7 @@ To build a daily performance table by agent with key metrics such as:
 - dbt Cloud
 - Snowflake (as the data warehouse)
 - GitHub for version control
+
+ Notes
+	•	Thresholds (17 outbound calls, 180 seconds for success) are exploratory and can be validated with the team.
+	•	All logic, lineage, and documentation are available in the project repository.
